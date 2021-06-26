@@ -1,0 +1,122 @@
+header {
+  padding: 64px 0;
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-transform: capitalize;
+    }
+    .logo {
+      color: $blue;
+      font-size: 37px;
+      display: block;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 47px;
+        height: 5px;
+        background-color: $red;
+        bottom: -1px;
+        left: 18px;
+        transition: .3s;
+      }
+      &:hover::after {
+        width: 0;
+        background-color: transparent;
+      }
+    }
+    nav {
+      a {
+        padding-left: 37px;
+        color: $blue;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    .buttons {
+      a {
+        color: $blue;
+        font-weight: 600;
+      }
+      // .lang {
+      //   margin-right: 25px;
+      //   i {
+      //     position: relative;
+      //     right: 3px;
+      //     bottom: -3px;
+      //   }
+      // }
+      .contact-us {
+        color: $red;
+        border-radius: 5px;
+        background-color: #5e585800;
+        padding: 10px 30px;
+        box-shadow: 0 5px 8px -8px #333;
+        transition: 190ms;
+        &:hover {
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+// hero section 
+
+.hero {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  min-height: calc(100vh- 226px);
+  .row {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(530px, 1fr));
+    .text {
+      position: relative;
+      transform: translateY(18%);
+      h1 {
+        font-size: 53px;
+        color: $blue;
+        margin-bottom: 70px;
+      }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        a {
+          display: inline-block;
+          text-transform: capitalize;
+          font-weight: 600;
+          transition: .3s;
+        }
+        .more {
+          color: $white;
+          background-color: $red;
+          border-radius: 30px;
+          padding: 9px 24px;
+          &:hover {
+            color: $blue;
+            background-color: transparent;
+          }
+        }
+        .touch {
+          color: $white;
+          background-color: $blue;
+          border-radius: 30px;
+          padding: 9px 24px;
+          &:hover {
+            background-color: transparent;
+            color: $blue
+          }
+        }
+      }
+    }
+  }
+}

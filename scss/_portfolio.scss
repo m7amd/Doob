@@ -1,0 +1,158 @@
+.portfolio {
+  overflow: hidden;
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .port-btn {
+    text-align: center;
+    a {
+      color: $blue;
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 15px;
+      display: inline-block;
+      border: 2px solid $blue;
+      border-radius: 30px;
+      transition: .3s;
+      box-shadow: 0px 6px 13px -7px #3333336b;
+      padding: 10px 20px;
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 10px 10px;
+    .img {
+      max-width: 100%;
+    }
+  }
+}
+
+
+// Blog 
+
+.blog {
+  overflow: hidden;
+  h4 {
+    color: $red;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    .adventure.active {
+      background-color: $red;
+      color: white;
+      span:first-of-type {
+        color: $white;
+      } 
+      .rb {
+        color: $white;
+      }
+    }
+    .adventure {
+      overflow: hidden;
+      position: relative;
+      width: 320px;
+      height: 385px;
+      box-shadow: 1px 1px 11px -7px #333;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        box-shadow: none;
+        .top {
+          transition-delay: 0s;
+        }
+        .right {
+          transition-delay: $duration/4;
+        }
+        .bottom {
+          transition-delay: $duration/2;
+        }
+        .left {
+          transition-delay: $duration*3/4;
+        }
+        .top,
+        .bottom {
+          transform: scaleX(1);
+        }
+        .left,
+        .right {
+            transform: scaleY(1);
+        }
+      }
+      span:not(:first-of-type) {
+          position: absolute;
+          display: block;
+          background: $blue;
+          transition: all $duration/4 linear;
+      }
+      .top,
+      .bottom {
+      width: 100%;
+      height: 3px;
+      transform: scaleX(0);
+      }
+      .left,
+      .right {
+      width: 3px;
+      height: 100%;
+      transform: scaleY(0);
+      }
+      .top {
+        top: 0;
+        left: 0;
+        transition-delay: $duration*3/4;
+        transform-origin: top left;
+      }
+      .right {
+        top: 0;
+        right: 0;
+        transition-delay: $duration/2;
+        transform-origin: top left;
+      }
+      .bottom {
+        bottom: 0;
+        right: 0;
+        transition-delay: $duration/4;
+        transform-origin: top right;
+      }
+      .left {
+        top: 0;
+        left: 0;
+        transform-origin: bottom left;
+      }
+      h3 {
+        // padding: 66px ​0px 3px 45px;   
+        padding-top: 66px;
+        padding-bottom: 3px;
+        padding-left: 45px;
+      }
+      span:first-of-type {
+        display: inline-block;
+        padding-left: 45px;
+        color: $gray;
+      }
+      .rb {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        color: $red;
+        font-size: 27px;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.about-us {
+  overflow: hidden;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    .box {
+      h2 {
+        font-size: 30px;
+        margin-bottom: 60px;
+      }
+      a.touch {
+        background-color: $red;
+        font-weight: 600;
+        color: $white;
+        border-radius: 30px;
+        padding: 10px 29px;
+        font-size: 14px;
+        transition: .3s;
+        &:hover {
+          color: $blue;
+          background-color: transparent;
+        }
+      }
+    }
+    .box:not(:first-child) {
+      overflow: hidden;
+      position: relative;
+      width: 320px;
+      height: 385px;
+      box-shadow: 1px 1px 11px -7px #333;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        box-shadow: none;
+        .top {
+          transition-delay: 0s;
+        }
+        .right {
+          transition-delay: $duration/4;
+        }
+        .bottom {
+          transition-delay: $duration/2;
+        }
+        .left {
+          transition-delay: $duration*3/4;
+        }
+        .top,
+        .bottom {
+          transform: scaleX(1);
+        }
+        .left,
+        .right {
+            transform: scaleY(1);
+        }
+      }
+      .img {
+        padding: 31px 0px 66px 45px;
+      }
+      p {
+        font-weight: 600;
+        padding-left: 45px;
+        font-size: 19px;
+      }
+      span {
+          position: absolute;
+          display: block;
+          background: $blue;
+          transition: all $duration/4 linear;
+      }
+      .top,
+      .bottom {
+      width: 100%;
+      height: 3px;
+      transform: scaleX(0);
+      }
+      .left,
+      .right {
+      width: 3px;
+      height: 100%;
+      transform: scaleY(0);
+      }
+      .top {
+        top: 0;
+        left: 0;
+        transition-delay: $duration*3/4;
+        transform-origin: top left;
+      }
+      .right {
+        top: 0;
+        right: 0;
+        transition-delay: $duration/2;
+        transform-origin: top left;
+      }
+      .bottom {
+        bottom: 0;
+        right: 0;
+        transition-delay: $duration/4;
+        transform-origin: top right;
+      }
+      .left {
+        top: 0;
+        left: 0;
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+// Our Company Section 
+.company {
+  overflow: hidden;
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 70px;
+    .img,
+    .text {
+      flex: 1;
+    }
+    .text {
+      h4 {
+        color: $red;
+        font-size: 18px;
+      }
+      p {
+        margin-top: 44px;
+        font-weight: 600;
+        font-size: 30px;
+      }
+    }
+  }
+}
