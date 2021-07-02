@@ -34,6 +34,7 @@ header {
         color: $blue;
         font-size: 18px;
         font-weight: 600;
+        transition: .3s;
       }
     }
     .buttons {
@@ -61,6 +62,14 @@ header {
           box-shadow: none;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    h1 {
+      text-align: center;
     }
   }
 }
@@ -115,6 +124,28 @@ header {
             background-color: transparent;
             color: $blue
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .hero {
+    text-align: center;
+    .row {
+      gap: 40px;
+      h1 {
+        font-size: 40px !important;
+      }
+      .buttons {
+        justify-content: center;
+        margin-bottom: 80px;
+      }
+      .img {
+        svg {
+          height: auto;
+          width: 328px;
         }
       }
     }

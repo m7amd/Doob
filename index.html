@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- header  -->
-    <header>
+    <header class="header">
       <div class="container">
         <div class="row">
           <h1>
@@ -26,11 +26,11 @@
             </a>
           </h1>
           <nav>
-            <a href="#">home</a>
-            <a href="#">about us</a>
-            <a href="#">portfolio</a>
-            <a href="#">blog</a>
-            <a href="#">contact us</a>
+            <a href="#" data-scroll="home">home</a>
+            <a href="#" data-scroll="about">about us</a>
+            <a href="#" data-scroll="portfolio">portfolio</a>
+            <a href="#" data-scroll="blog">blog</a>
+            <a href="#" data-scroll="contact">contact us</a>
           </nav>
           <div class="buttons">
             <!-- <a href="#" class="lang">EN
@@ -46,7 +46,7 @@
 
     <!-- Hero Section  -->
 
-    <div class="hero">
+    <div class="hero" id="home">
       <div class="container">
         <div class="row">
           <div class="text">
@@ -573,7 +573,7 @@
 
     <!-- About us Section  -->
 
-    <section class="about-us pd">
+    <section class="about-us pd" id="about">
       <div class="container">
         <div class="row">
           <div class="box">
@@ -1120,7 +1120,7 @@
 
     <!-- Portfolio  -->
 
-    <div class="portfolio pd">
+    <div class="portfolio pd" id="portfolio">
       <div class="container">
         <h2>
           See some of our <br>
@@ -1154,7 +1154,7 @@
 
     <!-- Blog  -->
     
-    <div class="blog pd">
+    <div class="blog pd" id="blog">
       <div class="container">
         <h4>BLOG STORIES</h4>
         <h2>Check Our News</h2>
@@ -1194,7 +1194,7 @@
 
     <!-- Contact us  -->
 
-    <div class="contact-us pd">
+    <div class="contact-us pd" id="contact">
       <div class="container">
         <h4>Contact Us</h4>
         <h2>Get in Touch</h2>
@@ -1221,11 +1221,11 @@
       <h5>Doob</h5>
       <h2>CREATIVITY ABOVE</h2>
       <div class="links">
-        <a href="#">home</a>
-        <a href="#">about us</a>
-        <a href="#">portfolio</a>
-        <a href="#">blog</a>
-        <a href="#">contact us</a>
+        <a href="#" data-scroll="home">home</a>
+        <a href="#" data-scroll="about">about us</a>
+        <a href="#" data-scroll="portfolio">portfolio</a>
+        <a href="#" data-scroll="blog">blog</a>
+        <a href="#" data-scroll="contact">contact us</a>
       </div>
       <span> © 2019 - Doob,All Right Reserved</span>
       <div class="icons">
@@ -1236,6 +1236,12 @@
     </footer>
 
     <!-- Footer  -->
+
+    <!-- Scroll To Top  -->
+
+    <i class="fa fa-arrow-up to-top" aria-hidden="true"></i>
+
+    <!-- Scroll To Top  -->
     
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>

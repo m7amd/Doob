@@ -31,7 +31,8 @@ header {
       padding-left: 37px;
       color: #314584;
       font-size: 18px;
-      font-weight: 600; }
+      font-weight: 600;
+      transition: .3s; }
     header .row .buttons a {
       color: #314584;
       font-weight: 600; }
@@ -46,6 +47,9 @@ header {
         background-color: transparent;
         box-shadow: none; }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  header h1 {
+    text-align: center; } }
 .hero {
   overflow: hidden;
   display: flex;
@@ -90,11 +94,25 @@ header {
             background-color: transparent;
             color: #314584; }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .hero {
+    text-align: center; }
+    .hero .row {
+      gap: 40px; }
+      .hero .row h1 {
+        font-size: 40px !important; }
+      .hero .row .buttons {
+        justify-content: center;
+        margin-bottom: 80px; }
+      .hero .row .img svg {
+        height: auto;
+        width: 328px; } }
 .about-us {
   overflow: hidden; }
   .about-us .row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     gap: 20px; }
     .about-us .row .box h2 {
       font-size: 30px;
@@ -194,6 +212,21 @@ header {
       font-weight: 600;
       font-size: 30px; }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .about-us .row {
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 50px; }
+
+  .company {
+    text-align: center; }
+    .company .row {
+      flex-flow: column wrap;
+      justify-content: center;
+      gap: 50px; }
+      .company .row .img svg {
+        height: auto;
+        width: 343px; } }
 .portfolio {
   overflow: hidden; }
   .portfolio h2 {
@@ -221,6 +254,8 @@ header {
     gap: 10px 10px; }
     .portfolio .row .img {
       max-width: 100%; }
+      .portfolio .row .img img {
+        width: 100%; }
 
 .blog {
   overflow: hidden; }
@@ -233,8 +268,9 @@ header {
     font-size: 30px;
     margin-bottom: 20px; }
   .blog .row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     gap: 20px; }
     .blog .row .adventure.active {
       background-color: #FF3946;
@@ -317,6 +353,11 @@ header {
         color: #FF3946;
         font-size: 27px; }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .blog .row {
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 50px; } }
 .contact-us {
   overflow: hidden; }
   .contact-us h4 {
@@ -337,8 +378,8 @@ header {
       flex: 1; }
   .contact-us .row input,
   .contact-us .row textarea {
-    border: none;
     outline: none;
+    border: none;
     display: inline-block;
     padding: 9px 17px;
     background-color: #F4FAFE;
@@ -352,7 +393,8 @@ header {
       font-size: 1rem; }
   .contact-us .row textarea {
     height: 200px;
-    width: 100%; }
+    width: 100%;
+    resize: none; }
   .contact-us .send-btn {
     text-align: center;
     margin-top: 27px; }
@@ -402,6 +444,9 @@ header {
     .footer .icons i:hover {
       transform: rotate(360deg); }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer .links a {
+    padding-left: 36px; } }
 html {
   font-size: 100%;
   box-sizing: border-box; }
@@ -442,5 +487,27 @@ ul {
 ::selection {
   color: #fbc531;
   background-color: #2f3640; }
+
+.to-top {
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  right: -50px;
+  bottom: 20px;
+  background-color: #FF3946;
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 17px;
+  text-align: center;
+  line-height: 40px;
+  transition: .4s; }
+  .to-top:hover {
+    background-color: #314584; }
+
+.to-top.show {
+  right: 20px; }
 
 /*# sourceMappingURL=main.css.map */
