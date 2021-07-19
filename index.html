@@ -8,8 +8,8 @@
     <meta name="description" content="Doob is fully layered PSD template,every element is on one layer,gruped and organized">
     <title>Doob</title>
     <link rel="stylesheet" href="scss/normalize.css">
-    <link rel="stylesheet" href="scss/sweetalert2.min.css">
     <link rel="stylesheet" href="scss/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -18,25 +18,28 @@
   <body>
     <!-- header  -->
     <header class="header">
-      <div class="container">
-        <div class="row">
-          <h1>
-            <a href="index.html" class="logo">
-              Doob
-            </a>
-          </h1>
-          <nav>
-            <a href="#" data-scroll="home">home</a>
-            <a href="#" data-scroll="about">about us</a>
-            <a href="#" data-scroll="portfolio">portfolio</a>
-            <a href="#" data-scroll="blog">blog</a>
-            <a href="#" data-scroll="contact">contact us</a>
-          </nav>
-          <div class="buttons">
-            <!-- <a href="#" class="lang">EN
-              <i class="fa fa-angle-down"></i>
-            </a> -->
-            <a href="#" class="contact-us">contact us</a>
+      <div class="fixed-nav">
+        <div class="container">
+          <div class="row">
+            <h1 style="user-select: none;">
+              <a href="index.html" class="logo" translate="no" draggable="false">
+                Doob
+              </a>
+            </h1>
+            <i class="fa fa-bars humbrger" id="toggle"></i>
+            <nav class="show">
+              <a href="#" data-scroll="home">home</a>
+              <a href="#" data-scroll="about">about us</a>
+              <a href="#" data-scroll="portfolio">portfolio</a>
+              <a href="#" data-scroll="blog">blog</a>
+              <a href="#" data-scroll="contact">contact us</a>
+            </nav>
+            <div class="buttons">
+              <!-- <a href="#" class="lang">EN
+                <i class="fa fa-angle-down"></i>
+              </a> -->
+              <a href="#" class="contact-us">contact us</a>
+            </div>
           </div>
         </div>
       </div>
@@ -573,7 +576,7 @@
 
     <!-- About us Section  -->
 
-    <section class="about-us pd" id="about">
+    <section class="about-us pd" id="about" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="box">
@@ -631,7 +634,7 @@
     </section>
 
 
-    <section class="company pd">
+    <section class="company pd" data-aos="fade-right">
       <div class="container">
         <div class="row">
           <div class="img">
@@ -1120,7 +1123,7 @@
 
     <!-- Portfolio  -->
 
-    <div class="portfolio pd" id="portfolio">
+    <div class="portfolio pd" id="portfolio" data-aos="fade-left">
       <div class="container">
         <h2>
           See some of our <br>
@@ -1154,7 +1157,7 @@
 
     <!-- Blog  -->
     
-    <div class="blog pd" id="blog">
+    <div class="blog pd" id="blog" data-aos="zoom-out-right">
       <div class="container">
         <h4>BLOG STORIES</h4>
         <h2>Check Our News</h2>
@@ -1196,20 +1199,30 @@
 
     <div class="contact-us pd" id="contact">
       <div class="container">
-        <h4>Contact Us</h4>
-        <h2>Get in Touch</h2>
-        <div class="row">
-          <div class="inputs">
-            <input type="email" placeholder="Your email">
-            <input type="text" placeholder="Subject">
+        <form action="">
+          <h4>Contact Us</h4>
+          <h2>Get in Touch</h2>
+          <div class="row">
+            <div class="inputs">
+              <div class="email">
+                <input type="email" placeholder="Your email" autofocus name="email">
+                <div class="emailMsg"></div>
+              </div>
+              <div class="subject">
+                <input type="text" placeholder="Subject" maxlength="30" name="subject">
+                <div class="subjectMsg"></div>
+              </div>
+            </div>
+            <div class="message">
+              <textarea placeholder="Message here..." maxlength="600" name="message"></textarea>
+              <div class="textMsg"></div>
+            </div>
           </div>
-          <div class="message">
-            <textarea placeholder="Message here..."></textarea>
+          <div class="send-btn">
+            <button type="submit">Send Message</button>
+            <span>Sending your message...</span>
           </div>
-        </div>
-        <div class="send-btn">
-          <a href="#">Send Message</a>
-        </div>
+      </form>
       </div>
     </div>
 
@@ -1229,9 +1242,9 @@
       </div>
       <span> © 2019 - Doob,All Right Reserved</span>
       <div class="icons">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
       </div>
     </footer>
 
@@ -1242,9 +1255,8 @@
     <i class="fa fa-arrow-up to-top" aria-hidden="true"></i>
 
     <!-- Scroll To Top  -->
-    
-    <script src="js/sweetalert2.min.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

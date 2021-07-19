@@ -16,11 +16,12 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: 'Work Sans', sans-serif;
   color: $blue;
   font-size: 1rem;
   text-transform: capitalize;
-  line-height: 1.5;
+  line-height: inherit;
 }
 
 a {
@@ -81,6 +82,7 @@ ul {
   text-align: center;
   line-height: 40px;
   transition: .4s;
+  z-index: 999;
   &:hover {
     background-color: $blue
   }
@@ -88,3 +90,4 @@ ul {
 .to-top.show {
   right: 20px;
 }
+

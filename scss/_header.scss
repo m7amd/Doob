@@ -1,5 +1,13 @@
 header {
   padding: 64px 0;
+  .fixed-nav {
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
   .row {
     display: flex;
     flex-flow: row wrap;
@@ -19,7 +27,7 @@ header {
         width: 47px;
         height: 5px;
         background-color: $red;
-        bottom: -1px;
+        bottom: -3px;
         left: 18px;
         transition: .3s;
       }
@@ -27,6 +35,9 @@ header {
         width: 0;
         background-color: transparent;
       }
+    }
+    .humbrger {
+      display: none;
     }
     nav {
       a {
@@ -66,10 +77,46 @@ header {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 768px) {
   header {
     h1 {
       text-align: center;
+    }
+    .humbrger {
+      display: block !important;
+      font-size: 24px;
+      color: $blue;
+      cursor: pointer;
+      // position: relative;
+      // right: -181px;
+    }
+    nav {
+      opacity: 0;
+      position: relative;
+      bottom: 10px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: $medNightBlue;
+      width: 100%;
+      height: 235px;
+      border-top-left-radius: 95px;
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 95px;
+      a {
+        color: $white !important;
+        padding-left: 0 !important;
+        margin-bottom: 10px;
+      }
+    }
+    .show {
+      opacity: 1 !important;
+    }
+    .buttons {
+      .contact-us {
+        display: none;
+      }
     }
   }
 }
@@ -125,6 +172,12 @@ header {
             color: $blue
           }
         }
+      }
+    }
+    .img {
+      max-width: 100%;
+      svg {
+        width: 100%;
       }
     }
   }
