@@ -160,7 +160,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px){
   .about-us {
     .row {
       flex-flow: row wrap;

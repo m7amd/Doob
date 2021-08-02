@@ -156,7 +156,7 @@ header {
       .hero .row .img svg {
         height: auto;
         width: 328px; } }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   header .row {
     justify-content: space-between; }
     header .row .logo {
@@ -292,7 +292,7 @@ header {
       .company .row .img svg {
         height: auto;
         width: 343px; } }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .about-us .row {
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -437,7 +437,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     gap: 50px; } }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .portfolio .row {
     grid-template-columns: repeat(4, minmax(366px, 1fr)); }
 
@@ -584,7 +584,7 @@ header {
     padding-left: 36px; }
   .footer .links a:last-child {
     margin-top: 8px; } }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .contact-us .row .inputs {
     flex-flow: column wrap;
     align-items: flex-start; }
