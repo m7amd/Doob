@@ -57,35 +57,44 @@ header {
         box-shadow: none; }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  header h1 {
-    text-align: center; }
-  header .humbrger {
-    display: block !important;
-    font-size: 24px;
-    color: #314584;
-    cursor: pointer; }
-  header nav {
-    opacity: 0;
-    position: relative;
-    bottom: 10px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #2c3e50;
-    width: 100%;
-    height: 235px;
-    border-top-left-radius: 95px;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 95px; }
-    header nav a {
-      color: #FFFFFF !important;
-      padding-left: 0 !important;
-      margin-bottom: 10px; }
-  header .show {
-    opacity: 1 !important; }
-  header .buttons .contact-us {
-    display: none; } }
+  header {
+    padding: 0; }
+    header .fixed-nav {
+      background-color: #FFFFFF;
+      position: relative; }
+    header h1 {
+      text-align: center; }
+    header .humbrger {
+      display: block !important;
+      font-size: 24px;
+      color: #314584;
+      cursor: pointer;
+      position: relative;
+      right: -105px; }
+    header nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: center;
+      position: absolute;
+      right: 23px;
+      top: 100%;
+      background-color: #2c3e50;
+      min-width: 335px;
+      padding: 20px;
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 95px;
+      opacity: 0; }
+      header nav a {
+        display: block;
+        color: #FFFFFF !important;
+        padding-left: 0 !important; }
+        header nav a:not(:last-child) {
+          margin-bottom: 15px; }
+        header nav a:hover {
+          padding-left: 20px !important; }
+    header .buttons .contact-us {
+      display: none; } }
 .hero {
   overflow: hidden;
   display: flex;
@@ -147,6 +156,21 @@ header {
       .hero .row .img svg {
         height: auto;
         width: 328px; } }
+@media (min-width: 768px) {
+  header .row {
+    justify-content: space-between; }
+    header .row .logo {
+      font-size: 44px; }
+    header .row nav {
+      position: relative;
+      left: -68px; }
+      header .row nav a {
+        font-weight: 700; }
+
+  .hero .row h1 {
+    font-size: 43px !important; }
+  .hero .row .img svg {
+    width: 407px; } }
 .about-us {
   overflow: hidden; }
   .about-us .row {
@@ -268,6 +292,19 @@ header {
       .company .row .img svg {
         height: auto;
         width: 343px; } }
+@media (min-width: 768px) {
+  .about-us .row {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 27px 174px;
+    width: 82%; }
+
+  .company .row {
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+    .company .row .text,
+    .company .row .img {
+      flex: 0.40; } }
 .portfolio {
   overflow: hidden; }
   .portfolio h2 {
@@ -400,6 +437,14 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     gap: 50px; } }
+@media (min-width: 768px) {
+  .portfolio .row {
+    grid-template-columns: repeat(4, minmax(366px, 1fr)); }
+
+  .blog .row {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 14px; } }
 .contact-us {
   overflow: hidden; }
   .contact-us h4 {
@@ -539,6 +584,18 @@ header {
     padding-left: 36px; }
   .footer .links a:last-child {
     margin-top: 8px; } }
+@media (min-width: 768px) {
+  .contact-us .row .inputs {
+    flex-flow: column wrap;
+    align-items: flex-start; }
+    .contact-us .row .inputs .email,
+    .contact-us .row .inputs .subject {
+      width: 738px !important; }
+  .contact-us .row .message textarea {
+    width: 78.59%; }
+  .contact-us .send-btn {
+    position: relative;
+    left: -79px; } }
 html {
   font-size: 100%;
   box-sizing: border-box; }

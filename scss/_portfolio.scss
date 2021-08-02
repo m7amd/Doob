@@ -171,3 +171,18 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .portfolio {
+    .row {
+      grid-template-columns: repeat(4, minmax(366px, 1fr));
+    }
+  }
+  .blog {
+    .row {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 14px;
+    }
+  }
+}

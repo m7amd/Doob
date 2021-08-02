@@ -159,3 +159,24 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .about-us {
+    .row {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 27px 174px;
+      width: 82%;
+    }
+  }
+  .company {
+    .row {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      .text,
+      .img {
+        flex: 0.40;
+      }
+    }
+  }
+}

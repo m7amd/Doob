@@ -184,3 +184,26 @@
     }
   }
 }
+@media(min-width: 768px) {
+  .contact-us {
+    .row {
+      .inputs {
+        flex-flow: column wrap;
+        align-items: flex-start;
+        .email,
+        .subject {
+          width: 738px !important;
+        }
+      }
+      .message {
+        textarea {
+          width: 78.59%;
+        }
+      }
+    }
+    .send-btn {
+      position: relative;
+      left: -79px;
+    }
+  }
+}

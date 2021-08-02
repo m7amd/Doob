@@ -1,3 +1,25 @@
+window.onload = () => {
+  this.scrollTo ({
+    top: 0
+  })
+}
+
+// Toggle Humberger Menu 
+function myFunction() {
+
+  let nav = document.querySelector(".show");
+
+  if (nav.style.opacity === "0") {
+
+    nav.style.opacity = "1";
+
+  } else {
+
+    nav.style.opacity = "0";
+
+  }
+}
+
 // Scroll To Top button
 
 let scrollToTop = document.querySelector('.to-top');
@@ -16,7 +38,7 @@ window.onscroll = () => {
 
 }
 
-scrollToTop.onclick = function () {
+scrollToTop.onclick = () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -64,21 +86,3 @@ footerLinks.forEach((item) => {
 
 // INITIALIZE AOS
 AOS.init();
-
-// INITIALIZE niceScroll
-
-$( () => {
-  // $("body").niceScroll({
-  //   touchbhavior: true,
-  //   zindex: '999999',
-  //   scrollspeed: '0', // 30
-  //   cursorcolor:"#314584",
-  //   background:"#ecf0f1",
-  //   cursorborder:"1px solid #314584",
-  //   cursorborderradius: '4px',
-  //   cursorwidth:"8px",
-  // });
-    // Toggle Humbrger menu
-    // $('nav.show').css('opacity','0')
-});
-
